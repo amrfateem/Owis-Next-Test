@@ -12,9 +12,17 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useMutation } from "react-query";
 import { useState } from "react";
+import React from "react";
+
+// Define a TypeScript interface for the form values
+interface FormValues {
+  title: string;
+  author: string;
+  content: string;
+}
 
 const CreatePost = () => {
-  const initialValues = {
+  const initialValues: FormValues = {
     title: "",
     author: "",
     content: "",
@@ -30,7 +38,7 @@ const CreatePost = () => {
       .min(50, "Content must be at least 50 characters"),
   });
 
-  const createPostMutation = async (postData) => {
+  const createPostMutation = async (postData: FormValues) => {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       headers: {
@@ -50,7 +58,7 @@ const CreatePost = () => {
 
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values: FormValues) => {
     try {
       await mutate(values);
       setIsSuccess(true);

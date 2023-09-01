@@ -23,7 +23,7 @@ const Home = ({ posts }) => {
         Blog Posts
       </Heading>
       <Link href="/create-post">
-          <Button mb="4">Create Post</Button>
+        <Button mb="4">Create Post</Button>
       </Link>
       {authorsLoading ? (
         <p>Loading authors...</p>

@@ -1,7 +1,17 @@
 import { Box, Container, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import React from "react";
 import { useQuery } from "react-query";
 
-const Post = ({ post }) => {
+interface PostProps {
+  post: {
+    id: number;
+    title: string;
+    body: string;
+    userId: number;
+  };
+}
+
+const Post: React.FC<PostProps> = ({ post }) => {
   const {
     data: author,
     isLoading: authorLoading,
@@ -10,8 +20,8 @@ const Post = ({ post }) => {
 
   const {
     data: comments,
-    commentsLoading,
-    commentsError,
+    isLoading: commentsLoading,
+    isError: commentsError,
   } = useQuery(["comments", post.id], () => getComments(post.id));
 
   return (
@@ -25,7 +35,12 @@ const Post = ({ post }) => {
         </Heading>
         <Text>{post.body}</Text>
         <Text fontSize="sm" color="gray.500" mt="4">
-          Author: {authorLoading ? "Loading..." : authorError ? "Error" : author}
+          Author:{" "}
+          {authorLoading
+            ? "Loading..."
+            : authorError
+            ? "Error"
+            : author || "Unknown"}
         </Text>
       </Box>
       <Box mt="8">
@@ -55,7 +70,11 @@ const Post = ({ post }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: {
+  query: {
+    id: string;
+  };
+}) {
   const { id } = context.query;
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}`
@@ -68,7 +87,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-const getAuthor = async (userId) => {
+const getAuthor = async (userId: number) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${userId}`
   );
@@ -79,7 +98,7 @@ const getAuthor = async (userId) => {
   return authorData.name;
 };
 
-const getComments = async (postId) => {
+const getComments = async (postId: number) => {
   const response = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
   );
