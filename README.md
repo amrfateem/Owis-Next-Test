@@ -40,15 +40,15 @@ Ensure you have the following installed:
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/blog-post-app.git
+git clone https://github.com/amrfateem/Owis-Next-Test
 
 2. Navigate to the project directory:
 
-cd blog-post-app
+cd Owis-Next-Test
 
 3. Install dependencies:
 
-npm install
+npm i
 
 4. Start the development server:
 

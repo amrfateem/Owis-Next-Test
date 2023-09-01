@@ -14,8 +14,6 @@ const Post = ({ post }) => {
     commentsError,
   } = useQuery(["comments", post.id], () => getComments(post.id));
 
-  console.log(author);
-
   return (
     <Container maxW="full" mt="8">
       <Heading as="h2" size="lg" mb="4">
@@ -27,8 +25,7 @@ const Post = ({ post }) => {
         </Heading>
         <Text>{post.body}</Text>
         <Text fontSize="sm" color="gray.500" mt="4">
-          Author:{" "}
-          {authorLoading ? "Loading..." : authorError ? "Error" : author.name}
+          Author: {authorLoading ? "Loading..." : authorError ? "Error" : author}
         </Text>
       </Box>
       <Box mt="8">
