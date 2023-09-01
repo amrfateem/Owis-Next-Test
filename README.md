@@ -1,38 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blog Post Web Application
+
+A simple web application for creating and viewing blog posts. This project utilizes Next.js, Chakra UI, React Query, and fetches data from the JSONPlaceholder API.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Design Decisions](#design-decisions)
+- [Technologies](#technologies)
+
+## Overview
+
+The Blog Post Web Application allows users to view a list of blog posts, create new posts, and view individual posts with their respective authors. This project demonstrates the integration of Next.js for server-side rendering, Chakra UI for styling, React Query for data fetching, and dynamic routing.
+
+## Features
+
+- View a list of blog posts.
+- Create new blog posts.
+- View individual blog posts with their authors.
+- Error handling and loading states for API requests.
+- Integration with JSONPlaceholder API for data.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to set up and run the project on your local machine.
 
-```bash
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js Latest
+- npm Latest
+
+### Installation
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/blog-post-app.git
+
+2. Navigate to the project directory:
+
+cd blog-post-app
+
+3. Install dependencies:
+
+npm install
+
+4. Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open your web browser and access the application at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Visit the homepage to view a list of blog posts.
+- Click "Create Post" to create a new blog post.
+- Click on a blog post title to view the full post and author information.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Design Decisions
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js:** Next.js was chosen for server-side rendering to improve performance and SEO.
+- **Chakra UI:** Chakra UI was used for styling due to its simplicity and flexibility.
+- **React Query:** React Query was utilized for data fetching, providing error handling and loading states.
 
-## Learn More
+## Technologies
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/): A React framework for server-rendered applications.
+- [Chakra UI](https://chakra-ui.com/): A simple component library for building React applications.
+- [React Query](https://react-query.tanstack.com/): A library for managing, caching, and synchronizing server state in React applications.
