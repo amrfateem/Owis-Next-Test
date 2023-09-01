@@ -4,72 +4,118 @@ A simple web application for creating and viewing blog posts. This project utili
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Design Decisions](#design-decisions)
-- [Technologies](#technologies)
-
-## Overview
-
-The Blog Post Web Application allows users to view a list of blog posts, create new posts, and view individual posts with their respective authors. This project demonstrates the integration of Next.js for server-side rendering, Chakra UI for styling, React Query for data fetching, and dynamic routing.
-
-## Features
-
-- View a list of blog posts.
-- Create new blog posts.
-- View individual blog posts with their authors.
-- Error handling and loading states for API requests.
-- Integration with JSONPlaceholder API for data.
+- [Project Structure](#project-structure)
+- [Running the Development Server](#running-the-development-server)
+- [Building for Production](#building-for-production)
+- [Project Features](#project-features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Getting Started
 
-Follow these steps to set up and run the project on your local machine.
-
 ### Prerequisites
 
-Ensure you have the following installed:
+Before you begin, ensure you have the following prerequisites installed on your local machine:
 
-- Node.js Latest
-- npm Latest
+- [Node.js](https://nodejs.org/) (Latest)
+- [npm](https://www.npmjs.com/)
 
 ### Installation
 
-1. Clone the repository:
+1. Clone this repository:
 
-git clone https://github.com/amrfateem/Owis-Next-Test
+   ```bash
+   git clone https://github.com/amrfateem/Owis-Next-Test
+   ```
 
 2. Navigate to the project directory:
 
-cd Owis-Next-Test
+   ```bash
+   cd Owis-Next-Test
+   ```
 
-3. Install dependencies:
+3. Install project dependencies:
 
-npm i
+   If you're using npm:
 
-4. Start the development server:
+   ```bash
+   npm install
+   ```
 
+   If you're using Yarn:
+
+   ```bash
+   yarn install
+   ```
+
+## Project Structure
+
+The project structure is organized as follows:
+
+```
+my-nextjs-project/
+├── pages/               # Next.js pages
+├── styles/              # CSS styles
+├── README.md            # Project README
+└── package.json         # Project dependencies and scripts
+```
+
+## Running the Development Server
+
+To run the development server, use the following command:
+
+```bash
 npm run dev
+```
 
-5. Open your web browser and access the application at [http://localhost:3000](http://localhost:3000).
+or
 
-## Usage
+```bash
+yarn dev
+```
 
-- Visit the homepage to view a list of blog posts.
-- Click "Create Post" to create a new blog post.
-- Click on a blog post title to view the full post and author information.
+This command starts the Next.js development server, and you can access your application at [http://localhost:3000](http://localhost:3000) in your web browser.
 
-## Design Decisions
+## Building for Production
 
-- **Next.js:** Next.js was chosen for server-side rendering to improve performance and SEO.
-- **Chakra UI:** Chakra UI was used for styling due to its simplicity and flexibility.
-- **React Query:** React Query was utilized for data fetching, providing error handling and loading states.
+To build the project for production, you can use the following command:
 
-## Technologies
+```bash
+npm run build
+```
 
-- [Next.js](https://nextjs.org/): A React framework for server-rendered applications.
-- [Chakra UI](https://chakra-ui.com/): A simple component library for building React applications.
-- [React Query](https://react-query.tanstack.com/): A library for managing, caching, and synchronizing server state in React applications.
+or
+
+```bash
+yarn build
+```
+
+This will create an optimized production build of your Next.js application.
+
+## Project Features
+
+This project includes the following features:
+
+- Basic Next.js setup
+- Routing with Next.js
+- React component structure
+- Chakra UI integration
+- Data fetching with `fetch` and React Query
+- Form handling with Formik and Yup
+- Server-side rendering (SSR) with Next.js
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework for building web applications
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Chakra UI](https://chakra-ui.com/) - UI component library for React
+- [React Query](https://react-query.tanstack.com/) - Data fetching and state management library
+- [Formik](https://formik.org/) - Form handling in React
+- [Yup](https://github.com/jquense/yup) - Schema validation for forms
+- [Node.js](https://nodejs.org/) - JavaScript runtime
+- [npm](https://www.npmjs.com/) - Package manager
+- [Yarn](https://yarnpkg.com/) - Alternative package manager
